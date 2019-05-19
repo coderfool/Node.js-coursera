@@ -22,6 +22,7 @@ dishRouter.route('/')
 })
 
 .put((_req, res) => {
+    res.statusCode = 403;
     res.end('PUT operation not supported on /dishes');
 })
 
@@ -42,6 +43,7 @@ dishRouter.route('/:dishId')
 })
 
 .post((req, res) => {
+    res.statusCode = 403;
     res.end('POST operation not supported on /dishes/' + req.params.dishId);
 })
 

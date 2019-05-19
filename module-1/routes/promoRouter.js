@@ -22,6 +22,7 @@ promoRouter.route('/')
 })
 
 .put((_req, res) => {
+    res.statusCode = 403;
     res.end('PUT operation not supported on /promotions');
 })
 
@@ -42,6 +43,7 @@ promoRouter.route('/:promoId')
 })
 
 .post((req, res) => {
+    res.statusCode = 403;
     res.end('POST operation not supported on /promotions/' + req.params.promoId);
 })
 
